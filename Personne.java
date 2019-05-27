@@ -26,7 +26,7 @@ public class Personne {
     }
     
     //Constructeur 1 
-    public Personne(int IdPersonne){
+    public Personne(int IdPersonne, String nom, String prenom){
         IdPersonne = genID.getAndIncrement();
         nom = null;
         prenom = null;

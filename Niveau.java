@@ -24,7 +24,7 @@ public class Niveau {
     }
     
     //Constructeur 1 
-    public Niveau(int IdNiveau){
+    public Niveau(int IdNiveau, String nom){
         IdNiveau = genID.getAndIncrement();
         nom = null;
     }

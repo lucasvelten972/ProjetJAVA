@@ -16,19 +16,22 @@ public class Trimestre {
         //Attributs
     public static AtomicInteger genID = new AtomicInteger();
     protected int IdTrimestre;
+    private int IdAnneeScolaire;
     public Date Datedebut;
     public Date Datefin;
     
     //Constructeur 0
     public Trimestre(){
         IdTrimestre = 0;
+        IdAnneeScolaire=0;
         Datedebut = null;
         Datefin = null;
     }
     
     //Constructeur 1 
-    public Trimestre(int IdTrimestre){
+    public Trimestre(int IdTrimestre, int IdAnneeScolaire, Date Datedebut, Date Datefin){
         IdTrimestre = genID.getAndIncrement();
+        this.IdAnneeScolaire=IdAnneeScolaire;
         this.Datedebut = Datedebut;
         this.Datefin = Datefin;
     }
@@ -37,15 +40,21 @@ public class Trimestre {
     public void setTrimestre(int newIdTrimestre){
         IdTrimestre = newIdTrimestre;
     }
-    public void setTrimestre (Date newDatedebut){
+    public void setTrimestreAS(int newIdAnneeScolaire){
+        IdAnneeScolaire=newIdAnneeScolaire;
+    }
+    public void setTrimestredated(Date newDatedebut){
         Datedebut = newDatedebut;
     }
-    public void Trimestre(Date newDatefin){
+    public void setTrimestredatef(Date newDatefin){
         Datefin = newDatefin;
     }
     
     public int getIdTrimestre(){
         return IdTrimestre;
+    }
+    public int getIdAnneeScolaire(){
+        return IdAnneeScolaire;
     }
     public Date getDatedebut(){
         return Datedebut;

@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package Modele;
-import java.sql.Connection;
+import Connexion.Connexion;
+import java.sql.SQLException;
 
 /**
  *
@@ -12,10 +13,10 @@ import java.sql.Connection;
  */
 public abstract class DAO<T> {
 
-  protected Connection connect = null;
+  protected Connexion connect = null;
    
-  public DAO(Connection conn){
-    this.connect = conn;
+  public DAO(Connexion conn) throws SQLException, ClassNotFoundException{
+    this.connect = new Connexion("Script","root","") ;
   }
    
   /**

@@ -24,7 +24,7 @@ public class Discipline {
     }
     
     //Constructeur 1 
-    public Discipline(int IdDiscipline){
+    public Discipline(int IdDiscipline, String nomdiscipline){
         IdDiscipline = genID.getAndIncrement();
         nomdiscipline = null;
     }
